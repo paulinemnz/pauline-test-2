@@ -1,0 +1,23 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+@import 'shadcn/tailwind.css';
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-border: var(--border);
+  --color-ring: var(--ring);
+}
+
+:root { --background: #071a25; --foreground: #edf8f5; --border: rgb(255 255 255 / 0.1); --ring: #67e8f9; }
+* { box-sizing: border-box; }
+html { background: var(--background); }
+body { margin: 0; background: var(--background); color: var(--foreground); font-family: var(--font-geist-sans), Arial, sans-serif; }
+button, input, select { font: inherit; }
+.map-grid { background-image: linear-gradient(rgb(103 232 249 / .08) 1px, transparent 1px), linear-gradient(90deg, rgb(103 232 249 / .08) 1px, transparent 1px); background-size: 34px 34px; }
+.france-shape { clip-path: polygon(49% 0%, 66% 8%, 83% 18%, 91% 39%, 84% 59%, 69% 74%, 58% 94%, 42% 100%, 33% 83%, 14% 69%, 3% 48%, 12% 28%, 28% 15%); }
+::selection { background: #67e8f9; color: #071a25; }
